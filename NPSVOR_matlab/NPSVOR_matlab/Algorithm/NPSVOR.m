@@ -79,7 +79,7 @@ classdef NPSVOR < Algorithm
             obj.parameters.C = 10.^(-3:1:3);
 	    % kernel width
             obj.parameters.k = 10.^(-3:1:3);
-            obj.parameters.e = 0.2;
+            obj.parameters.e = 0.1;
             obj.parameters.rho = 1;
         end
 
@@ -98,13 +98,12 @@ classdef NPSVOR < Algorithm
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
         function [model_information] = runAlgorithm(obj,train, test, parameters)
-            	addpath('/root/orca-master0/orca-master/src/Algorithms/NPSVOR');
                 param.C = parameters(1);
                 param.k = parameters(2);
                 param.e = parameters(3);
                 param.rho =1;
                 
-                train.uniqueTargets = unique([test.targets;train.targets]);
+                train.uniqueTargets = unique([train.targets]);
                 test.uniqueTargets = train.uniqueTargets;
                 train.nOfClasses = max(train.uniqueTargets);
                 test.nOfClasses = train.nOfClasses;
@@ -126,8 +125,6 @@ classdef NPSVOR < Algorithm
                 model.parameters = param;
                 model_information.model = model;
 
-            	rmpath('/root/orca-master0/orca-master/src/Algorithms/NPSVOR');
-
         end
         
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -146,16 +143,15 @@ classdef NPSVOR < Algorithm
         function [model]= train( obj, train, param)  
             
             H=Kernel( obj.kernelType, train.patterns',train.patterns', param.k);
-            Beta = zeros(train.nOfPatterns,train.nOfClasses);
-            b = zeros(1,train.nOfClasses);
             n = train.nOfPatterns;
-            A = [ H + param.rho*eye(n),ones(n,1);ones(1,n) 0]\speye(n+1);
+           % A = [ H + param.rho*eye(n)]\speye(n);
+            A = invChol_mex(H + param.rho*eye(n));
 %             for k = 1:train.nOfClasses 
 % %                 eta = sum(train.targets==k)/sum(train.targets~=k);
 %                 eta=1;
-%                 [Beta(:,k),b(k)] =  NonlinearNPSVOR2(H, A, train.targets,k,param.C, eta*param.C, train.nOfPatterns, param.e, param.rho);
+%                 [Beta(:,k),b(k)] =  NonlinearNPSVOR(H, A, train.targets,k,param.C, eta*param.C, train.nOfPatterns, param.e, param.rho);
 %             end
-            [Beta,b] = NonlinearNPSVORall(H, A, train.targets,param.C, param.C, train.nOfPatterns, param.e, param.rho);
+            [Beta,b] = NonlinearNPSVOR(H, A, train.targets,param.C, param.C, train.nOfPatterns, param.e, param.rho);
             model.Beta = Beta; 
             model.b = b;
             model.labelSet = unique(train.targets);

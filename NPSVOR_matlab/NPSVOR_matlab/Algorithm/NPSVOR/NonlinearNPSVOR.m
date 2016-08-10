@@ -1,5 +1,5 @@
 
-function [Beta, b] = NonlinearNPSVORall(H,A,Y,c1,c2,n,epsilon,rho)
+function [Beta, b, history] = NonlinearNPSVORall2(H,A,Y,c1,c2,n,epsilon,rho)
 %'traindata' is a training data matrix , each line is a sample vector
 %'targets' is a label vector,should  start  from 1 to p
 
@@ -9,12 +9,15 @@ ABSTOL   = 1e-2;
 RELTOL   = 1e-2;
 L = unique(Y);
 m = length(L);
-Z = 2*ones(n,m);  
-U = zeros(n,m); 
+Z = ones(n,m);  
+U = zeros(n,m);
 i=1;
+v2 = sum(A,2);
 %  A = [ H + rho*eye(n),ones(n,1);ones(1,n) 0]\speye(n+1);
 while i <=MAX_ITER
-    Beta = A(1:end-1,:)*[rho*(Z-U);zeros(1,m)];
+    v1 = A*(Z-U);
+    v = rho*sum(v1,1)/sum(v2); 
+    Beta = v1 -v2*v;
 %    Alpha = [ H0 + rho*eye(n),yk;yk' 0 ]\[rho*(Z-U);0];
 %    Alpha = Alpha(1:end-1);
     Zold = Z; 
@@ -29,7 +32,10 @@ while i <=MAX_ITER
     %U- -update
     r = Beta- Z;
     U = U + r;
- %   history.objval(i)  =  objective(H,Y, k, Beta,  epsilon);
+    for t=1:m
+        history.objval(i,t)  =  objective(H,Y, t, Beta(:,t),  epsilon);
+    end
+    history.fun(i) = sum(history.objval(i,:));
     s = rho*(Z - Zold);
     history.r_norm(i) = norm(r);
     history.s_norm(i) = norm(s);
@@ -42,6 +48,8 @@ while i <=MAX_ITER
     i = i+1;
 end
 %    Beta = Z;
+
+
 for j = 1:m
     k = L(j); 
    bk_c1 =  H(Y==k&(0<Beta(:,j)&Beta(:,j)<c1), :) * Beta(:,j) + epsilon;
@@ -50,6 +58,16 @@ for j = 1:m
    bk_r =  H(Y>k&(Beta(:,j)<0 & Beta(:,j)>-c2), :) * Beta(:,j) + 1;
    b(j) = mean([bk_c1;bk_c2;bk_l;bk_r]);
 end
+
+% for j = 1:m
+%     k = L(j); eps =1e-6;
+%    bk_c1 =  H(Y==k&(eps<Beta(:,j)&Beta(:,j)<c1-eps), :) * Beta(:,j) + epsilon;
+%    bk_c2 =  H(Y==k&(Beta(:,j)<-eps&Beta(:,j)>-c1+eps), :) * Beta(:,j)  - epsilon;
+%    bk_l =  H(Y<k&(Beta(:,j)>eps & Beta(:,j)<c2-eps), :) * Beta(:,j) - 1;
+%    bk_r =  H(Y>k&(Beta(:,j)<-eps & Beta(:,j)>-c2+eps), :) * Beta(:,j) + 1;
+%    b(j) = mean([bk_c1;bk_c2;bk_l;bk_r]);
+% end
+
 end
 
 function Znew = SoftThreshold(Zold,kappa)
