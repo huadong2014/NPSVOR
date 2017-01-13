@@ -1,16 +1,14 @@
 Nonparallel Support Vector Ordinal Regression
 ====
-Comparisons are carried out on the common Matlab framework which can be downloaded from \url{ http://www.uco.es/grupos/ayrna/orreview}. 
-We used the freely available LIBSVM for SVC1V1, SVC1VA, SVR\url{https://www.csie.ntu.edu.tw/~cjlin/libsvm/}
-CSSVC{libsvm-weights-3.12:\url{https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/weights/}}. 
-Codes used for  SVOREX and SVORIM are downloaded from \url{ http:/ /www.gatsby.ucl.ac.uk/?chuwei/svor.htm }. 
-REDSVM is downloaded from \url{ http://www.work.caltech.edu/~htlin/program/libsvm/}.
 
+
+Datasets
+------- 
 All the datasets in [1] are used for experiment. these datasets are available at  http://www.uco.es/grupos/ayrna/orreview. Other datasets are from http://www.gatsby.ucl.ac.uk/~chuwei/ordinalregression.html.
 
 Compared methods
 ------- 
-To test the performance of NPSVOR, we compare it with all the SVM-based ordinal regression models reported in the survey[1]. The used baselines are:<br\>  
+To test the performance of NPSVOR, we compare it with all the SVM-based ordinal regression models reported in the survey[1]. The used baselines are:<br>  
 SVC1V1: Standard SVC with One Vs One [2],<br\>  
 SVC1VA: Standard SVC with One Vs All [2],<br\>  
 SVR: Support Vector Regression [2],<br\>  
@@ -20,6 +18,14 @@ SVOREX: SVM for Ordinal Regression with Explicit Constraints[5],<br\>
 SVORIM: SVM for Ordinal Regression with Implicit Constraints[5], <br\>  
 REDSVM:  The reduction from cost-sensitive ordinal ranking applied to weighted binary classification framework to SVM[6].<br\>  
 OPBE: Ordinal Projection Based Ensemble[7]. <br\>  
+
+Get the codes:
+------- 
+Comparisons are carried out on the common Matlab framework which can be downloaded from [http://www.uco.es/grupos/ayrna/orreview](http://www.uco.es/grupos/ayrna/orreview). <br\> 
+We used the freely available LIBSVM for SVC1V1, SVC1VA, SVR[https://www.csie.ntu.edu.tw/~cjlin/libsvm/](https://www.csie.ntu.edu.tw/~cjlin/libsvm/)<br\> 
+CSSVC{libsvm-weights-3.12):[https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/weights/](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/weights/). <br\> 
+SVOREX and SVORIM: [http:/ /www.gatsby.ucl.ac.uk/?chuwei/svor.htm](http:/ /www.gatsby.ucl.ac.uk/?chuwei/svor.htm). <br\> 
+REDSVM: [http://www.work.caltech.edu/~htlin/program/libsvm/](http:/ /www.gatsby.ucl.ac.uk/?chuwei/svor.htm).
 
 References:
 ------- 
