@@ -9,15 +9,15 @@ All the datasets in [1] are used for experiment. these datasets are available at
 Compared methods
 ------- 
 To test the performance of NPSVOR, we compare it with all the SVM-based ordinal regression models reported in the survey[1]. The used baselines are:<br>  
-SVC1V1: Standard SVC with One Vs One [2],<br\>  
-SVC1VA: Standard SVC with One Vs All [2],<br\>  
-SVR: Support Vector Regression [2],<br\>  
-CSSVC: Cost-Sensitive Support Vector Classifier[3],<br\>  
-SVMOP: Support Vector Machines with Ordered Partitions[4],<br\>  
-SVOREX: SVM for Ordinal Regression with Explicit Constraints[5],<br\>  
-SVORIM: SVM for Ordinal Regression with Implicit Constraints[5], <br\>  
-REDSVM:  The reduction from cost-sensitive ordinal ranking applied to weighted binary classification framework to SVM[6].<br\>  
-OPBE: Ordinal Projection Based Ensemble[7]. <br\>  
+*SVC1V1: Standard SVC with One Vs One [2],<br\>  
+*SVC1VA: Standard SVC with One Vs All [2],<br\>  
+*SVR: Support Vector Regression [2],<br\>  
+*CSSVC: Cost-Sensitive Support Vector Classifier[3],<br\>  
+*SVMOP: Support Vector Machines with Ordered Partitions[4],<br\>  
+*SVOREX: SVM for Ordinal Regression with Explicit Constraints[5],<br\>  
+*SVORIM: SVM for Ordinal Regression with Implicit Constraints[5], <br\>  
+*REDSVM:  The reduction from cost-sensitive ordinal ranking applied to weighted binary classification framework to SVM[6].<br\>  
+*OPBE: Ordinal Projection Based Ensemble[7]. <br\>  
 
 Get the codes:
 ------- 
