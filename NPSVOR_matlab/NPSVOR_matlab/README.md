@@ -29,10 +29,10 @@ Get the codes:
 
 References:
 ------- 
-[1] P. A. Gutiérrez, M. Pérez-Ortiz, J. Sánchez-Monedero, F. Fernández-Navarro, and C. Hervás-Martınez, “Ordinal regression methods: survey and experimental study,” IEEE Transactions on Knowledge and Data Engineering, vol. 28, no. 1, pp. 127–146, 2016.<br>  
-[2] C.-W. Hsu and C.-J. Lin, “A comparison of methods for multiclass support vector machines,” Neural Networks, IEEE Transactions on,vol. 13, no. 2, pp. 415–425, 2002.<br>  
-[3] A. J. Smola and B. Schölkopf, “A tutorial on support vector regression,” Statistics and computing, vol. 14, no. 3, pp. 199–222, 2004.<br>  
-[4] W. Waegeman and L. Boullart, “An ensemble of weighted support vector machines for ordinal regression,” International Journal of Computer Systems Science and Engineering, vol. 3, no. 1, pp. 47–51, 2009.<br>  
-[5] W. Chu and S. S. Keerthi, “Support vector ordinal regression,” Neural computation, vol. 19, no. 3, pp. 792–815, 2007.<br>  
-[6] H.-T. Lin and L. Li, “Reduction from cost-sensitive ordinal ranking to weighted binary classification,” Neural Computation, vol. 24, no. 5, pp. 1329–1367, 2012.<br>  
+[1] P. A. Gutiérrez, M. Pérez-Ortiz, J. Sánchez-Monedero, F. Fernández-Navarro, and C. Hervás-Martınez, “Ordinal regression methods: survey and experimental study,” IEEE Transactions on Knowledge and Data Engineering, vol. 28, no. 1, pp. 127–146, 2016.<br\>  
+[2] C.-W. Hsu and C.-J. Lin, “A comparison of methods for multiclass support vector machines,” Neural Networks, IEEE Transactions on,vol. 13, no. 2, pp. 415–425, 2002.<br\>  
+[3] A. J. Smola and B. Schölkopf, “A tutorial on support vector regression,” Statistics and computing, vol. 14, no. 3, pp. 199–222, 2004.<br\>  
+[4] W. Waegeman and L. Boullart, “An ensemble of weighted support vector machines for ordinal regression,” International Journal of Computer Systems Science and Engineering, vol. 3, no. 1, pp. 47–51, 2009.<br\>  
+[5] W. Chu and S. S. Keerthi, “Support vector ordinal regression,” Neural computation, vol. 19, no. 3, pp. 792–815, 2007.<br\>  
+[6] H.-T. Lin and L. Li, “Reduction from cost-sensitive ordinal ranking to weighted binary classification,” Neural Computation, vol. 24, no. 5, pp. 1329–1367, 2012.<br\>  
 [7] M. Pérez-Ortiz, P. A. Gutiérrez, and C. Hervás-Martı́nez, “Projection-based ensemble learning for ordinal regression,” Cybernetics, IEEE Transactions on, vol. 44, no. 5, pp. 681–694, 2014.
