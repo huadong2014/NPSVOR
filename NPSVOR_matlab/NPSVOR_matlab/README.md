@@ -22,8 +22,8 @@ To test the performance of NPSVOR, we compare it with all the SVM-based ordinal 
 Get the codes:
 ------- 
 * Comparisons are carried out on the common Matlab framework which can be downloaded from [http://www.uco.es/grupos/ayrna/orreview](http://www.uco.es/grupos/ayrna/orreview). <br> 
-* We used the freely available LIBSVM for SVC1V1, SVC1VA, SVR[https://www.csie.ntu.edu.tw/~cjlin/libsvm/](https://www.csie.ntu.edu.tw/~cjlin/libsvm/)<br> 
-* CSSVC{libsvm-weights-3.12):[https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/weights/]* * (https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/weights/). <br> 
+* We used the freely available LIBSVM for SVC1V1, SVC1VA, SVR:[https://www.csie.ntu.edu.tw/~cjlin/libsvm/](https://www.csie.ntu.edu.tw/~cjlin/libsvm/)<br> 
+* CSSVC{libsvm-weights-3.12): https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/weights/. <br> 
 * SVOREX and SVORIM: [http:/ /www.gatsby.ucl.ac.uk/?chuwei/svor.htm](http:/ /www.gatsby.ucl.ac.uk/?chuwei/svor.htm). <br> 
 * REDSVM: [http://www.work.caltech.edu/~htlin/program/libsvm/](http:/ /www.gatsby.ucl.ac.uk/?chuwei/svor.htm).
 
