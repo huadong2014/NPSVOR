@@ -8,7 +8,8 @@ REDSVM is downloaded from \url{ http://www.work.caltech.edu/~htlin/program/libsv
 
 All the datasets in [1] are used for experiment. these datasets are available at  http://www.uco.es/grupos/ayrna/orreview. Other datasets are from http://www.gatsby.ucl.ac.uk/~chuwei/ordinalregression.html.
 
-Compared methods: 
+Compared methods
+------- 
 To test the performance of NPSVOR, we compare it with all the SVM-based ordinal regression models reported in the survey[1]. The used baselines are:
 SVC1V1: Standard SVC with One Vs One [2],
 SVC1VA: Standard SVC with One Vs All [2],
@@ -21,6 +22,7 @@ REDSVM:  The reduction from cost-sensitive ordinal ranking applied to weighted b
 OPBE: Ordinal Projection Based Ensemble[7]. 
 
 References:
+------- 
 [1] P. A. Gutiérrez, M. Pérez-Ortiz, J. Sánchez-Monedero, F. Fernández-Navarro, and C. Hervás-Martınez, “Ordinal regression methods: survey and experimental study,” IEEE Transactions on Knowledge and Data Engineering, vol. 28, no. 1, pp. 127–146, 2016.
 [2] C.-W. Hsu and C.-J. Lin, “A comparison of methods for multiclass support vector machines,” Neural Networks, IEEE Transactions on,vol. 13, no. 2, pp. 415–425, 2002.
 [3] A. J. Smola and B. Schölkopf, “A tutorial on support vector regression,” Statistics and computing, vol. 14, no. 3, pp. 199–222, 2004.
