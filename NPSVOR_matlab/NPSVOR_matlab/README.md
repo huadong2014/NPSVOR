@@ -1,6 +1,6 @@
 Nonparallel Support Vector Ordinal Regression
 ====
-
+Huadong Wang, Yong Shi, Lingfeng Niu and Yingjie Tian
 
 Datasets
 ------- 
